@@ -1,6 +1,6 @@
 # Continuous Control using Gemma
 
-This repository contains implementation for training Gemma 2B Instruct model on a continuous control task (Pendulum environment) using Generative Reinforcement Learning from Preference Optimization (GRPO).
+This repository contains implementation for training Gemma 2B Instruct model on a continuous control task (Pendulum environment) using Reinforcement Learning from Preference Optimization (GRPO).
 
 ## Overview
 
