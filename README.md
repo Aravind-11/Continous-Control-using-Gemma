@@ -6,14 +6,6 @@ This repository contains implementation for training Gemma 2B Instruct model on 
 
 This project demonstrates how to fine-tune the Google Gemma 2B Instruct model to learn continuous control policies for the Frozen Lake environment using reinforcement learning techniques. The implementation utilizes GRPO (Generative Reinforcement Learning from Preference Optimization) combined with expert demonstrations to train a language model to provide optimal action recommendations.
 
-## Features
-
-- Fine-tuning Gemma 2B Instruct model for continuous control tasks
-- GRPO implementation with expert demonstrations and Q-value guidance
-- Parameter-Efficient Fine-Tuning (PEFT) with LoRA
-- Few-shot learning with demonstration examples
-- Custom reward functions based on expert Q-values
-- TensorBoard integration for training monitoring
 
 ## Requirements
 
@@ -77,14 +69,6 @@ Training progress can be monitored with TensorBoard:
 tensorboard --logdir ./frozen-lake-gemma-2b-it-grpo
 ```
 
-## Model Architecture
-
-The implementation uses the following components:
-- **Gemma 2B Instruct**: Base language model
-- **LoRA Adapter**: For parameter-efficient fine-tuning
-- **XMLParser**: For parsing model outputs
-- **Custom Reward Function**: Based on expert Q-values and formatting
-- **Few-shot Examples**: To guide model responses
 
 ## License
 
