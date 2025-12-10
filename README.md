@@ -32,24 +32,15 @@ Although the model reliably produced structured outputs, it did not learn a stab
 
 While my fine-tuning approach did not converge, my professor and his team were alternatively working on a different idea that proved successful. They used **in-context learning** to predict actions, and their method worked well. The paper was accepted at **NeurIPS 2025**.
 
-### Prompted Policy Search (ProPS)
+The team introduced **Prompted Policy Search (ProPS)** where they added the experiences to the prompts continually without fine tuning the model and the LLM seems to have learned a policy by itself after several iterations. 
 
-Traditional reinforcement learning relies on scalar rewards, limiting its use of rich semantic knowledge. In contrast, humans learn by combining numerical feedback with language and prior knowledge. The team introduced **Prompted Policy Search (ProPS)**, a novel LLM-based reinforcement learning method that unifies numerical and linguistic reasoning within a single framework.
+The post on the [project website](https://props-llm.github.io/) illustrates the policy search process of ProPS in the various environments.
 
-Unlike prior work that augments existing RL components with language, ProPS places a large language model (LLM) at the center of the policy optimization loop—directly proposing policy updates based on both reward feedback and natural language input. Across 15 Gymnasium tasks, ProPS outperforms all seven popular RL methods on 8 tasks and shows further gains with domain knowledge, demonstrating the benefits of integrating semantics and numerics for more efficient, human-aligned RL.
+## The following code illustrates how to fine-tune an LLM using GRPO for RL tasks in OpenAI Gym Environments.
 
-The video on the [project website](https://props-llm.github.io/) illustrates the policy search process of ProPS in the Gymnasium Swimmer environment. It shows how the LLM synthesizes policy parameters based on reward feedback through its own reasoning, combining both numerical and linguistic signals.
+### Running the code
 
-**Project Website:** [https://props-llm.github.io/](https://props-llm.github.io/)
-
-This repository contains implementation for training Gemma 2B Instruct model on a continuous control task (Pendulum environment) using Reinforcement Learning from Preference Optimization (GRPO).
-
-## Overview
-
-This project demonstrates how to fine-tune the Google Gemma 2B Instruct model to learn continuous control policies for the Frozen Lake environment using reinforcement learning techniques. The implementation utilizes GRPO (Generative Reinforcement Learning from Preference Optimization) combined with expert demonstrations to train a language model to provide optimal action recommendations.
-
-
-## Requirements
+### Requirements
 
 - Python 3.8+
 - PyTorch
