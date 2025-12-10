@@ -1,7 +1,5 @@
 # Investigating optimal policy search via LLMS for Reinforcement Learning tasks
 
-# Fine-tuning Gemma-2B for Frozen Lake using GRPO
-
 ## Motivation
 
 The aim of this project is to explore whether an instruction-tuned LLM (Gemma-2B) can be fine-tuned into a decision-making policy for the Frozen Lake environment using only expert Q-values as supervision. The model is not asked to predict Q-values directly; instead, it generates a reasoning trace (`<think>`) and selects a final action (`<answer>`). Expert Q-values are then used to evaluate how good that chosen action is. The motivation is to test whether preference-based reinforcement learning (GRPO) can push a language model to behave like an optimal policy purely from scalar rewards derived from Q-value differences, without any supervised labels or regression losses.
