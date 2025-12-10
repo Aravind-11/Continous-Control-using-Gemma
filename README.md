@@ -24,7 +24,7 @@ where $Q_{\max}$ and $Q_{\min}$ are the maximum and minimum expert Q-values for 
 
 This reward is then used by GRPO: multiple sampled completions are compared, higher-reward completions are favored, and LoRA adapter weights are updated so the model becomes more likely to choose high-advantage actions in the future.
 
-## Conclusion
+## Results
 
 Although the model reliably produced structured outputs, it did not learn a stable or improving policy: the actions chosen by the LLM did not consistently correspond to higher expert Q-values, and training runs did not converge. The root issue is that the model receives only a single scalar advantage-like reward after choosing an action, without any direct supervision of Q-values or demonstration actions. This makes the learning signal sparse, high-variance, and difficult for GRPO to exploit in such a small environment. The results suggest that LLMs require either supervised action labels, direct Q-value regression, or richer reward shaping before preference-based RL can successfully teach grounded control behavior in this setting.
 
