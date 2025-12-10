@@ -30,7 +30,7 @@ Although the model reliably produced structured outputs, it did not learn a stab
 
 ## Alternative Approach: ProPS (What Worked)
 
-While our fine-tuning approach did not converge, my professor and his team were alternatively working on a different idea that proved successful. They used **in-context learning** to predict actions, and their method worked well. The paper was accepted at **NeurIPS 2025**.
+While my fine-tuning approach did not converge, my professor and his team were alternatively working on a different idea that proved successful. They used **in-context learning** to predict actions, and their method worked well. The paper was accepted at **NeurIPS 2025**.
 
 ### Prompted Policy Search (ProPS)
 
