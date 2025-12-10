@@ -26,7 +26,7 @@ This reward is then used by GRPO: multiple sampled completions are compared, hig
 
 ## Results
 
-Although the model reliably produced structured outputs, it did not learn a stable or improving policy: the actions chosen by the LLM did not consistently correspond to higher expert Q-values, and training runs did not converge. The root issue is that the model receives only a single scalar advantage-like reward after choosing an action, without any direct supervision of Q-values or demonstration actions. This makes the learning signal sparse, high-variance, and difficult for GRPO to exploit in such a small environment. The results suggest that LLMs require either supervised action labels, direct Q-value regression, or richer reward shaping before preference-based RL can successfully teach grounded control behavior in this setting.
+Across training runs, the model did not develop a stable or improving policy: its chosen actions did not consistently align with higher expert Q-values. I experimented with several alternative reward designs and shaping strategies to strengthen the learning signal, but these modifications did not lead to meaningful improvement. In parallel, we found that a simpler method—one that did not require fine-tuning and was later adopted by my professor’s team—achieved more reliable results for this task. This outcome suggests that, for small control environments like Frozen Lake, lightweight inference-time methods can outperform preference-based fine-tuning approaches such as GRPO.
 
 ## Alternative Approach: ProPS (What Worked)
 
